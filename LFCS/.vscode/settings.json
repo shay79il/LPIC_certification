@@ -1,0 +1,5 @@
+{
+  "cSpell.enableFiletypes": ["bat", "shellscript"],
+  "cSpell.language": "en,en-GB",
+  "cSpell.words": ["ANACRON", "atrm", "emerg", "journalctl", "lastlog", "pgrep", "poweroff", "renice"]
+}

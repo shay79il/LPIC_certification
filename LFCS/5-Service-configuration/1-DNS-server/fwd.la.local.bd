@@ -1,0 +1,33 @@
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	  IN	  SOA	ns1.la.local. root.la.local. (
+			            20		      ; Serial
+			        604800		      ; Refresh
+               86400		      ; Retry
+             2419200		      ; Expire
+              604800 )	      ; Negative Cache TTL
+;
+
+;Name Server Information
+    IN	NS	ns1.la.local.
+    IN	NS	ns2.la.local.
+
+;IP address of Name Server
+ns1     IN      A       192.168.2.10
+ns2     IN      A       192.168.2.20
+
+;MX - Mail Exchanger
+; 10 - stands for priority
+; 10 - stands for priority
+la.local.    IN	    MX    10 	  mail1.la.local.
+la.local.    IN	    MX    20 	  mail2.la.local.
+
+;A - Record HostName to IP address
+file1    IN      A       192.168.1.200
+mail1    IN      A       192.168.1.150
+mail2    IN      A       192.168.1.151
+www      IN      A       192.168.1.100
+
+;CNAME - Record
+www     IN      CNAME       www.la.local.
